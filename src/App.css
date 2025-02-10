@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+    :root[data-theme="light"] {
+        --text: #010618;
+        --background: #ecf0fe;
+        --primary: #1d57f7;
+        --secondary: #fb79ec;
+        --accent: #f94392;
+    }
+
+    :root[data-theme="dark"] {
+        --text: #e7ecfe;
+        --background: #010513;
+        --primary: #0842e2;
+        --secondary: #860476;
+        --accent: #bc0655;
+    }
+
+    html {
+        background-color: var(--background);
+        color: var(--text);
+        transition: background-color 0.5s ease, color 0.5s ease;
+    }
+}
+
+@layer utilities {
+    .bg-primary {
+        background-color: var(--primary);
+    }
+
+    .bg-secondary {
+        background-color: var(--secondary);
+    }
+
+    .bg-accent {
+        background-color: var(--accent);
+    }
+
+    .text-primary {
+        color: var(--primary);
+    }
+
+    .text-secondary {
+        color: var(--secondary);
+    }
+
+    .text-accent {
+        color: var(--accent);
+    }
+
+    .bg-background {
+        background-color: var(--background);
+    }
+
+    .text-background {
+        color: var(--background);
+    }
+
+    .text-light {
+        color: var(--text);
+    }
+}
